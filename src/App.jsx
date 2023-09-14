@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Header from './component/header/Header'
+import Cards from './component/Cards/Cards'
+import Cart from './component/CartSection/Cart'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <h1 className="underline">
-      Hello world!
-    </h1>
+<Header></Header>
+<div className="flex">
+  <Cards></Cards>
+  <Cart></Cart>
+</div>
     </>
   )
 }
