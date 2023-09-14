@@ -8,10 +8,10 @@ function App() {
   return (
     <>
 <Header></Header>
-<div className="flex">
+<main className="flex lg:container mx-auto">
   <Cards></Cards>
   <Cart></Cart>
-</div>
+</main>
     </>
   )
 }
