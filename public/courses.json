@@ -1,5 +1,4 @@
-{
-    "courses": [
+[
       {
         "title": "Introduction to Programming",
         "image": "https://i.ibb.co/ZWGZ2FG/florian-olivo-4hb-J-eym-Z1o-unsplash.jpg",
@@ -66,5 +65,4 @@
         "credit_hour": 5
       }
     ]
-  }
   
