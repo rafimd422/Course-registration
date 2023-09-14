@@ -1,18 +1,27 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types"; 
 import Card from "./Card";
-const Cards = () => {
-    const [cards, useCards] = useState([]);
 
-    useEffect(()=>{
-        fetch("courses.json")
-        .then(response => response.json())
-        .then(data => useCards(data))
-    },[])
+const Cards = ({ handleSelect }) => {
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    fetch("courses.json")
+      .then((response) => response.json())
+      .then((data) => setCards(data));
+  }, []);
+
   return (
-    <div className="flex flex-wrap gap-4">
-      {cards.map((card, idx) => <Card key={idx} card={card}></Card>)}
+    <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-4">
+      {cards.map((card, idx) => (
+        <Card key={idx} handleSelect={handleSelect} card={card}></Card>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Cards
+Cards.propTypes = {
+  handleSelect: PropTypes.func.isRequired,
+};
+
+export default Cards;
