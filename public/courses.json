@@ -1,0 +1,70 @@
+{
+    "courses": [
+      {
+        "title": "Introduction to Programming",
+        "image": "https://i.ibb.co/ZWGZ2FG/florian-olivo-4hb-J-eym-Z1o-unsplash.jpg",
+        "description": "This comprehensive course will teach you the fundamentals of programming, including key concepts like variables, data types, control structures, and more. Whether you're a beginner or looking to refresh your programming skills, this course is perfect for you. Join us today to start your journey into the exciting world of coding.",
+        "price": 15000,
+        "credit_hour": 2
+      },
+      {
+        "title": "Web Development Fundamentals",
+        "image": "https://i.ibb.co/Gkjng98/istockphoto-1290492381-1024x1024.png",
+        "description": "Discover the essential skills required to become a proficient web developer. From HTML and CSS basics to JavaScript interactivity, this course will equip you with the knowledge and hands-on experience needed to create responsive and dynamic websites. Join us and take your first step towards becoming a web development pro.",
+        "price": 10000,
+        "credit_hour": 1
+      },
+      {
+        "title": "Cybersecurity Fundamentals",
+        "image": "https://i.ibb.co/HPg7HwR/cyber-Security.png",
+        "description": "Protect your digital world with our comprehensive cybersecurity course. Dive into the world of ethical hacking, network security, and threat analysis. Gain the skills needed to defend against cyber threats and secure your organization's data. Join us now and become a cybersecurity expert.",
+        "price": 25000,
+        "credit_hour": 10
+      },
+
+      {
+        "title": "Software Development Lifecycle",
+        "image": "https://i.ibb.co/fqX2sgw/fotis-fotopoulos-6s-Al6a-Q4-OWI-unsplash.png",
+        "description": "Master the software development lifecycle from concept to deployment. This course covers requirements gathering, design, coding, testing, and deployment phases. Whether you're a software engineer or project manager, this course will enhance your understanding of the development process.",
+        "price": 35000,
+        "credit_hour": 2
+      },
+      {
+        "title": "Cloud Computing Essentials",
+        "image": "https://i.ibb.co/fYdj9Rr/Rectangle-3-1.png",
+        "description": "Enter the world of cloud computing with confidence. Learn about cloud service models, deployment models, and popular cloud platforms. This course is ideal for IT professionals, architects, and anyone looking to harness the power of cloud technology for business solutions.",
+        "price": 35000,
+        "credit_hour": 5
+      },
+      {
+        "title": "Introduction to OOP Python",
+        "image": "https://i.ibb.co/RggCYGc/Rectangle-2.png",
+        "description": "Learn object-oriented programming (OOP) with Python. Explore classes, objects, inheritance, and polymorphism. Whether you're new to programming or want to master Python's OOP capabilities, this course is the perfect starting point.",
+        "price": 23000,
+        "credit_hour": 5
+      },
+      {
+        "title": "Database (MySQL)",
+        "image": "https://i.ibb.co/VYYV7V5/Rectangle-2-1.png",
+        "description": "Master the art of database management using MySQL. Learn about database design, SQL queries, and data normalization. Whether you're a database novice or looking to enhance your skills, this course has you covered.",
+        "price": 35000,
+        "credit_hour": 5
+      },
+      {
+        "title": "Basic Data Structures",
+        "image": "https://i.ibb.co/XXKnnD3/Rectangle-3.png",
+        "description": "Build a solid foundation in data structures. This course covers essential data structures like arrays, linked lists, stacks, and queues. It's a must for anyone aspiring to become a skilled software developer or computer scientist.",
+        "price": 19000,
+        "credit_hour": 2
+      },
+
+      {
+        "title": "Mobile App Development",
+        "image": "https://i.ibb.co/2ZwChyx/app-Developer.png",
+        "description": "Create your own mobile applications with this hands-on course. You'll learn to develop apps for both Android and iOS platforms using popular frameworks and tools. Whether you have prior coding experience or not, this course will make you a mobile app developer.",
+        "price": 23000,
+        "credit_hour": 5
+      }
+    ]
+  }
+  
