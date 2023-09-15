@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBookOpen } from 'react-icons/fa';
 import PropTypes from 'prop-types'; 
 
-const Card = ({ card, handleSelect}) => {
+const Card = ({ card, handleSelect }) => {
   const { title, image, description, price, credit } = card;
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleClick = () => {
+    handleSelect(card);
+    setIsSelected(true);
+  };
 
   return (
     <>
@@ -25,9 +31,11 @@ const Card = ({ card, handleSelect}) => {
           </div>
           <div className="card-actions">
             <button
-              onClick={()=>handleSelect(card)}
-              className="btn btn-wide bg-blue-500 rounded-lg text-white hover:text-black"
-            > Select</button>
+              onClick={handleClick}
+              className={`btn btn-wide ${isSelected ? 'bg-green-500' : 'bg-blue-500'} rounded-lg text-white hover:text-black`}
+            >
+              {isSelected ? 'Selected' : 'Select'}
+            </button>
           </div>
         </div>
       </div>
@@ -38,7 +46,6 @@ const Card = ({ card, handleSelect}) => {
 Card.propTypes = {
   card: PropTypes.object.isRequired,
   handleSelect: PropTypes.func.isRequired,
-  
 };
 
 export default Card;
