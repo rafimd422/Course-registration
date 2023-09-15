@@ -8,25 +8,37 @@ import { useState } from 'react'
 const App = () => {
     
   const [title, setTitle] = useState([]);
-  const [disabled, setDisabled] = useState(false);
+  const [creditHour, setCreditHour] = useState(0);
+  const [creditRemaining, setCreditRemaining] = useState(0);
 
-  
+  // click handler function
   const handleSelect = (course) => {
 
     if(title.includes(course.title)){
       toast('⚠️ You already selected this course')
       return;
-     
     }
     const newTitle = [...title, course.title]
     setTitle(newTitle)
-  }
+    
+    const newCreditHour = creditHour + course.credit;
+    if(newCreditHour > 20){
+      toast('⚠️ You can not take more then 20 credit hour')
+      return;
+    }
+    const newCreditRemaining = 20 - newCreditHour;
+    console.log(newCreditRemaining)
+    setCreditRemaining(newCreditRemaining)
+    setCreditHour(newCreditHour)
+    }
+    // click handler function ended here
+
       return (
         <>
     <Header></Header>
     <main className="flex md:mx-auto md:gap-1 justify-evenly">
-      <Cards handleSelect ={handleSelect} disabled={disabled}></Cards>
-      <Cart ourTitle={title}></Cart>
+      <Cards handleSelect ={handleSelect}></Cards>
+      <Cart ourTitle={title} credit={creditHour} creditRemaining={creditRemaining}></Cart>
     </main>
     <ToastContainer
     position="bottom-center"
@@ -41,7 +53,7 @@ const App = () => {
     theme="dark"/>
         </>
       )
-      
     }
+
 
 export default App
