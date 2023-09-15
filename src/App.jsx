@@ -10,22 +10,25 @@ const App = () => {
   const [title, setTitle] = useState([]);
   const [creditHour, setCreditHour] = useState(0);
   const [creditRemaining, setCreditRemaining] = useState(0);
+  const [price, setPrice] = useState(0);
 
   // click handler function
   const handleSelect = (course) => {
-
+let disable = false;
     if(title.includes(course.title)){
+      disable = true;
       toast('⚠️ You already selected this course')
       return;
     }
-    const newTitle = [...title, course.title]
-    setTitle(newTitle)
-    
     const newCreditHour = creditHour + course.credit;
     if(newCreditHour > 20){
       toast('⚠️ You can not take more then 20 credit hour')
       return;
     }
+    const newTitle = [...title, course.title]
+    setTitle(newTitle)
+    const totalPrice = price + course.price;
+    setPrice(totalPrice)
     const newCreditRemaining = 20 - newCreditHour;
     console.log(newCreditRemaining)
     setCreditRemaining(newCreditRemaining)
@@ -38,7 +41,7 @@ const App = () => {
     <Header></Header>
     <main className="flex md:mx-auto md:gap-1 justify-evenly">
       <Cards handleSelect ={handleSelect}></Cards>
-      <Cart ourTitle={title} credit={creditHour} creditRemaining={creditRemaining}></Cart>
+      <Cart ourTitle={title} credit={creditHour} price={price} creditRemaining={creditRemaining}></Cart>
     </main>
     <ToastContainer
     position="bottom-center"

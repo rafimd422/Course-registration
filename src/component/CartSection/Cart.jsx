@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types'; 
 
-const Cart = ({ourTitle, credit,creditRemaining}) => {
+const Cart = ({ourTitle, credit,creditRemaining,price}) => {
 
 return (
 <div className="bg-base-100 shadow-xl h-fit rounded-xl p-12 me-2">
@@ -17,10 +18,16 @@ return (
 
 <hr />
 
-<h3 className="text-stone-900 text-opacity-80 text-base font-semibold">Total Price : 48000 USD</h3>
+<h3 className="text-stone-900 text-opacity-80 text-base font-semibold">Total Price : {price} USD</h3>
 </div>
   )
 }
 
-
+Cart.propTypes = {
+  ourTitle: PropTypes.array.isRequired,
+  price: PropTypes.number.isRequired,
+  creditRemaining: PropTypes.number.isRequired,
+  credit: PropTypes.number.isRequired,
+  
+};
 export default Cart

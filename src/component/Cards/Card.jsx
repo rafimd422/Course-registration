@@ -27,7 +27,7 @@ const Card = ({ card, handleSelect}) => {
             <button
               onClick={()=>handleSelect(card)}
               className="btn btn-wide bg-blue-500 rounded-lg text-white hover:text-black"
-            >Select</button>
+            > Select</button>
           </div>
         </div>
       </div>
