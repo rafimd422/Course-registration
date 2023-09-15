@@ -2,7 +2,7 @@ import React from 'react';
 import { FaBookOpen } from 'react-icons/fa';
 import PropTypes from 'prop-types'; 
 
-const Card = ({ card, handleSelect,disabled }) => {
+const Card = ({ card, handleSelect}) => {
   const { title, image, description, price, credit } = card;
 
   return (
@@ -24,12 +24,10 @@ const Card = ({ card, handleSelect,disabled }) => {
             </p>
           </div>
           <div className="card-actions">
-            <button disabled={disabled}
+            <button
               onClick={()=>handleSelect(card)}
               className="btn btn-wide bg-blue-500 rounded-lg text-white hover:text-black"
-            >
-              {disabled?'SELECTED': 'SELECT'}
-            </button>
+            >Select</button>
           </div>
         </div>
       </div>
@@ -37,7 +35,6 @@ const Card = ({ card, handleSelect,disabled }) => {
   );
 };
 
-// Define PropTypes for your component
 Card.propTypes = {
   card: PropTypes.object.isRequired,
   handleSelect: PropTypes.func.isRequired,
